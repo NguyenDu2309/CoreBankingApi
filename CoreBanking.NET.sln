@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36401.2 d17.14
+VisualStudioVersion = 17.14.36401.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBanking.AppHost.AppHost", "CoreBanking.AppHost\CoreBanking.AppHost.AppHost\CoreBanking.AppHost.AppHost.csproj", "{CD42690B-61E2-421E-A595-9583A5D0C2CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBanking.AppHost.ServiceDefaults", "CoreBanking.AppHost\CoreBanking.AppHost.ServiceDefaults\CoreBanking.AppHost.ServiceDefaults.csproj", "{BB25823E-2BFF-8DDD-E7E7-12459033CDA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBanking.API", "CoreBanking.API\CoreBanking.API.csproj", "{27D75A09-40AB-C42C-4449-90BEAA68764C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BB25823E-2BFF-8DDD-E7E7-12459033CDA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB25823E-2BFF-8DDD-E7E7-12459033CDA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB25823E-2BFF-8DDD-E7E7-12459033CDA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27D75A09-40AB-C42C-4449-90BEAA68764C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27D75A09-40AB-C42C-4449-90BEAA68764C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27D75A09-40AB-C42C-4449-90BEAA68764C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27D75A09-40AB-C42C-4449-90BEAA68764C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
