@@ -4,19 +4,19 @@ var postgres = builder.AddPostgres("postgres")
     .WithImageTag("latest")
     .WithVolume("corebanking-db", "/var/lib/postgresql/data")
     .WithLifetime(ContainerLifetime.Persistent)
-    .WithPgAdmin(rbuilder =>
-    {
-        rbuilder.WithImageTag("latest");
-    });
+    .WithPgWeb();
 
 var corebankingDb = postgres.AddDatabase("corebanking-db", "corebanking");
 
 var migrationService = builder.AddProject<Projects.CoreBanking_API>("corebanking-api")
-        .WithReference(corebankingDb).WaitFor(postgres);
+        .WithReference(corebankingDb)
+        .WaitFor(corebankingDb);
 
 builder.AddProject<Projects.CoreBanking_MigrationService>("corebanking-migrationservice")
         .WithReference(corebankingDb)
         .WaitFor(postgres)
         .WaitForCompletion(migrationService);
+
+builder.AddProject<Projects.CoreBanking_ServiceDefaults>("corebanking-servicedefaults");
 
 builder.Build().Run();

@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\CoreBanking.API\CoreBanking.API.csproj" />
     <ProjectReference Include="..\..\CoreBanking.MigrationService\CoreBanking.MigrationService.csproj" />
+    <ProjectReference Include="..\..\CoreBanking.ServiceDefaults\CoreBanking.ServiceDefaults.csproj" />
   </ItemGroup>
 
 </Project>

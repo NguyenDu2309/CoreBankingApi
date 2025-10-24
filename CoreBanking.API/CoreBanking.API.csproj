@@ -13,6 +13,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CoreBanking.AppHost\CoreBanking.AppHost.ServiceDefaults\CoreBanking.AppHost.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\CoreBanking.Infrastructure\CoreBanking.Infrastructure.csproj" />
+    <ProjectReference Include="..\CoreBanking.MigrationService\CoreBanking.MigrationService.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,8 @@
 ﻿using Asp.Versioning;
+using CoreBanking.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CoreBanking.API.Bootstraping;
-
 public static class ApplicationServiceExtensions
 {
     public static IHostApplicationBuilder AddApplicationServices(this IHostApplicationBuilder builder)
@@ -10,15 +11,19 @@ public static class ApplicationServiceExtensions
         builder.Services.AddOpenApi();
 
         builder.Services.AddApiVersioning(
-            opts =>
-            {
+            opts => {
                 opts.ReportApiVersions = true;
                 opts.ApiVersionReader = ApiVersionReader.Combine(
                     new UrlSegmentApiVersionReader(),
                     new HeaderApiVersionReader("X-Version")
-                );
-            }    
+                    );
+            }
         );
+
+        builder.AddNpgsqlDbContext<CoreBankingDbContext>("corebanking-db", configureDbContextOptions: dbContextOptionsBuilder =>
+        {
+            dbContextOptionsBuilder.UseNpgsql(builder => builder.MigrationsAssembly(typeof(CoreBankingDbContext).Assembly.FullName));
+        });
 
         return builder;
     }

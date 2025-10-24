@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CoreBanking.AppHost.ServiceDefaults")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e572bf0149b282d1a4f79c8f5b0cefe9af271e1f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a872ff8614b85c899a28bff610741338b4cc63ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("CoreBanking.AppHost.ServiceDefaults")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CoreBanking.AppHost.ServiceDefaults")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
