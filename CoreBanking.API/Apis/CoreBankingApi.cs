@@ -43,17 +43,59 @@ public static class CoreBankingApi
         throw new NotImplementedException();
     }
 
-    private static async Task CreateAccount(HttpContext context)
-    {
-        throw new NotImplementedException();
-    }
-
-    private static async Task GetAccounts(
-        [AsParameters] PaginationRequest pagination
+    private static async Task<Results<Ok<Account>, BadRequest>> CreateAccount(
+        [AsParameters] CoreBankingServices services,
+        Account account
         )
     {
-        throw new NotImplementedException();
+        if (account.CustomerId == Guid.Empty)
+        {
+            services.Logger.LogError("Customer ID cannot be empty");
+            return TypedResults.BadRequest();
+        }
+
+        account.Id = Guid.CreateVersion7();
+        account.Balance = 0;
+        account.Number = GenerateAccountNumber();
+
+        services.DbContext.Accounts.Add(account);
+        await services.DbContext.SaveChangesAsync();
+
+        services.Logger.LogInformation("Account created");
+
+        return TypedResults.Ok(account);
     }
+
+    private static string GenerateAccountNumber()
+    {
+        return DateTime.UtcNow.Ticks.ToString();
+    }
+
+    private static async Task<Ok<PaginationResponse<Account>>> GetAccounts(
+        [AsParameters] CoreBankingServices services,
+        [AsParameters] PaginationRequest pagination,
+        Guid? customerId = null
+        )
+    {
+        IQueryable<Account> accounts = services.DbContext.Accounts;
+        if (customerId.HasValue)
+        {
+            accounts = accounts.Where(c => c.CustomerId == customerId.Value);
+        }
+
+        return TypedResults.Ok(new PaginationResponse<Account>(
+            pagination.PageIndex,
+            pagination.PageSize,
+            await accounts.CountAsync(),
+            await accounts
+            .OrderBy(c => c.Number)
+            .Skip(pagination.PageIndex * pagination.PageSize)
+            .Take(pagination.PageSize)
+            .ToListAsync()
+        ));
+    }
+
+  
 
     private static async Task<Results<Ok<Customer>, BadRequest>> CreateCustomer(
         [AsParameters] CoreBankingServices services,
@@ -67,13 +109,13 @@ public static class CoreBankingApi
         }
         customer.Address ??= "";
         if (customer.Id == Guid.Empty)
-        { 
+        {
             customer.Id = Guid.CreateVersion7();
         }
 
         services.DbContext.Customers.Add(customer);
         await services.DbContext.SaveChangesAsync();
-        
+
         services.Logger.LogInformation("Customer created");
 
         return TypedResults.Ok(customer);
