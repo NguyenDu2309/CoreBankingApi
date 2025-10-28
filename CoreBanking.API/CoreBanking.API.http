@@ -9,7 +9,45 @@ Post {{CoreBanking.API_HostAddress}}/api/v1/corebanking/customers
 Content-Type: application/json
 
 {
-    "id": "c6a4c4a3-5f02-49f9-94b2-d89728f03b64",
+    "id": "00000000-0000-0000-0000-000000000000",
     "name": "du",
     "address": "my address"
 }
+###
+
+GET {{CoreBanking.API_HostAddress}}/api/v1/corebanking/accounts
+Accept: application/json
+###
+
+POST {{CoreBanking.API_HostAddress}}/api/v1/corebanking/accounts
+Content-Type: application/json
+
+{
+    "CustomerId": "c6a4c4a3-5f02-49f9-94b2-d89728f03b64"
+}
+###
+
+PUT {{CoreBanking.API_HostAddress}}/api/v1/corebanking/accounts/019a2b36-5bb2-707b-84e9-0d49aa0085e3/deposit
+Content-Type: application/json
+
+{
+    "amount": 500
+}
+###
+
+PUT {{CoreBanking.API_HostAddress}}/api/v1/corebanking/accounts/019a2b36-5bb2-707b-84e9-0d49aa0085e3/withdraw
+Content-Type: application/json
+
+{
+    "amount": 500
+}
+###
+
+PUT {{CoreBanking.API_HostAddress}}/api/v1/corebanking/accounts/019a2b36-5bb2-707b-84e9-0d49aa0085e3/transfer
+Content-Type: application/json
+
+{
+    "amount": 200,
+    "destinationAccountNumber": "638972583162005014"
+}
+###
