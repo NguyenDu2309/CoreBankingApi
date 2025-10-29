@@ -1,1 +1,1 @@
-An simple CoreBankingAPI, running with .NET Aspire
+A simple CoreBankingAPI, running with .NET Aspire
