@@ -20,7 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CoreBanking.API\CoreBanking.API.csproj" />
     <ProjectReference Include="..\CoreBanking.AppHost\CoreBanking.AppHost.AppHost\CoreBanking.AppHost.csproj" />
+    <ProjectReference Include="..\CoreBanking.Infrastructure\CoreBanking.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
