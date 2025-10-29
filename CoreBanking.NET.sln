@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBanking.MigrationServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBanking.ServiceDefaults", "CoreBanking.ServiceDefaults\CoreBanking.ServiceDefaults.csproj", "{B91F96C4-B8E5-63EC-2011-5D73CF23FAF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBanking.UnitTests", "CoreBanking.UnitTests\CoreBanking.UnitTests.csproj", "{B53F95AD-1CBC-49D7-838D-1CCC8A3E56D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{B91F96C4-B8E5-63EC-2011-5D73CF23FAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B91F96C4-B8E5-63EC-2011-5D73CF23FAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B91F96C4-B8E5-63EC-2011-5D73CF23FAF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B53F95AD-1CBC-49D7-838D-1CCC8A3E56D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B53F95AD-1CBC-49D7-838D-1CCC8A3E56D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B53F95AD-1CBC-49D7-838D-1CCC8A3E56D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B53F95AD-1CBC-49D7-838D-1CCC8A3E56D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

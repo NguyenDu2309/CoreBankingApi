@@ -154,7 +154,7 @@ public static class CoreBankingApi
         }
     }
 
-    private static async Task<Results<Ok<Account>, BadRequest>> Deposit(
+    public  static async Task<Results<Ok<Account>, BadRequest>> Deposit(
         [AsParameters] CoreBankingServices services,
         Guid id,
         DepositionRequest deposition)
@@ -202,7 +202,7 @@ public static class CoreBankingApi
         }
     }
     #region Account
-    private static async Task<Results<Ok<Account>, BadRequest>> CreateAccount(
+    public static async Task<Results<Ok<Account>, BadRequest>> CreateAccount(
         [AsParameters] CoreBankingServices services,
         Account account
         )
@@ -230,7 +230,7 @@ public static class CoreBankingApi
         return DateTime.UtcNow.Ticks.ToString();
     }
 
-    private static async Task<Ok<PaginationResponse<Account>>> GetAccounts(
+    public static async Task<Ok<PaginationResponse<Account>>> GetAccounts(
         [AsParameters] CoreBankingServices services,
         [AsParameters] PaginationRequest pagination,
         Guid? customerId = null
@@ -256,7 +256,7 @@ public static class CoreBankingApi
 
     #endregion
     #region Customer
-    private static async Task<Results<Ok<Customer>, BadRequest>> CreateCustomer(
+    public static async Task<Results<Ok<Customer>, BadRequest>> CreateCustomer(
         [AsParameters] CoreBankingServices services,
         Customer customer
         )
