@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36401.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBanking.AppHost.AppHost", "CoreBanking.AppHost\CoreBanking.AppHost.AppHost\CoreBanking.AppHost.AppHost.csproj", "{CD42690B-61E2-421E-A595-9583A5D0C2CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBanking.AppHost", "CoreBanking.AppHost\CoreBanking.AppHost.AppHost\CoreBanking.AppHost.csproj", "{CD42690B-61E2-421E-A595-9583A5D0C2CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBanking.AppHost.ServiceDefaults", "CoreBanking.AppHost\CoreBanking.AppHost.ServiceDefaults\CoreBanking.AppHost.ServiceDefaults.csproj", "{BB25823E-2BFF-8DDD-E7E7-12459033CDA8}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBanking.ServiceDefaults", "CoreBanking.ServiceDefaults\CoreBanking.ServiceDefaults.csproj", "{B91F96C4-B8E5-63EC-2011-5D73CF23FAF1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBanking.UnitTests", "CoreBanking.UnitTests\CoreBanking.UnitTests.csproj", "{B53F95AD-1CBC-49D7-838D-1CCC8A3E56D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBanking.IntegrationTests", "CoreBanking.IntegrationTests\CoreBanking.IntegrationTests.csproj", "{502824D2-A231-4E5F-BE2C-229ED25AB627}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{B53F95AD-1CBC-49D7-838D-1CCC8A3E56D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B53F95AD-1CBC-49D7-838D-1CCC8A3E56D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B53F95AD-1CBC-49D7-838D-1CCC8A3E56D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{502824D2-A231-4E5F-BE2C-229ED25AB627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{502824D2-A231-4E5F-BE2C-229ED25AB627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{502824D2-A231-4E5F-BE2C-229ED25AB627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{502824D2-A231-4E5F-BE2C-229ED25AB627}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

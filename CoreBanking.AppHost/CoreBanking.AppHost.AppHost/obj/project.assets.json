@@ -3464,9 +3464,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Du\\CoreBanking.NET\\CoreBanking.AppHost\\CoreBanking.AppHost.AppHost\\CoreBanking.AppHost.AppHost.csproj",
-      "projectName": "CoreBanking.AppHost.AppHost",
-      "projectPath": "C:\\Users\\Du\\CoreBanking.NET\\CoreBanking.AppHost\\CoreBanking.AppHost.AppHost\\CoreBanking.AppHost.AppHost.csproj",
+      "projectUniqueName": "C:\\Users\\Du\\CoreBanking.NET\\CoreBanking.AppHost\\CoreBanking.AppHost.AppHost\\CoreBanking.AppHost.csproj",
+      "projectName": "CoreBanking.AppHost",
+      "projectPath": "C:\\Users\\Du\\CoreBanking.NET\\CoreBanking.AppHost\\CoreBanking.AppHost.AppHost\\CoreBanking.AppHost.csproj",
       "packagesPath": "C:\\Users\\Du\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Du\\CoreBanking.NET\\CoreBanking.AppHost\\CoreBanking.AppHost.AppHost\\obj\\",
       "projectStyle": "PackageReference",
